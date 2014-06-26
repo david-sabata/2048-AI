@@ -15,14 +15,7 @@ function GameManager(size, InputManager, Actuator) {
 
 
   this.inputManager.on('run', function() {
-    if (this.running) {
-      this.running = false;
-      this.actuator.setRunButton('Auto-run');
-    } else {
-      this.running = true;
-      this.run()
-      this.actuator.setRunButton('Stop');
-    }
+	this.run();
   }.bind(this));
 
   this.setup();
